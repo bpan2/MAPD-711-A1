@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Assignment_1">
+
+    <TextView
+        android:id="@+id/fullNameA1Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:text="Full Name: "
+        app:layout_constraintBaseline_toBaselineOf="@+id/fullNameA1TextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/fullNameA1TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="89dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/fullNameA1Label"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/provinceA1Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        android:text="Province: "
+        app:layout_constraintBottom_toTopOf="@+id/qualificationA1Label"
+        app:layout_constraintStart_toStartOf="@+id/fullNameA1Label" />
+
+    <TextView
+        android:id="@+id/provinceA1TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/fullNameA1TextView"
+        app:layout_constraintTop_toBottomOf="@+id/fullNameA1TextView" />
+
+    <TextView
+        android:id="@+id/qualificationA1TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/provinceA1TextView"
+        app:layout_constraintTop_toBottomOf="@+id/provinceA1TextView" />
+
+    <TextView
+        android:id="@+id/qualificationA1Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qualification: "
+        app:layout_constraintBaseline_toBaselineOf="@+id/qualificationA1TextView"
+        app:layout_constraintStart_toStartOf="@+id/provinceA1Label" />
+
+    <TextView
+        android:id="@+id/hobbyA1TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/qualificationA1TextView"
+        app:layout_constraintTop_toBottomOf="@+id/qualificationA1TextView" />
+
+    <TextView
+        android:id="@+id/dreamJobA1TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/hobbyA1TextView"
+        app:layout_constraintTop_toBottomOf="@+id/hobbyA1TextView" />
+
+    <TextView
+        android:id="@+id/hobbyA1Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="Hobby: "
+        app:layout_constraintStart_toStartOf="@+id/qualificationA1Label"
+        app:layout_constraintTop_toBottomOf="@+id/qualificationA1Label" />
+
+    <TextView
+        android:id="@+id/dreamJobA1Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:text="Dream Job: "
+        app:layout_constraintStart_toStartOf="@+id/hobbyA1Label"
+        app:layout_constraintTop_toBottomOf="@+id/hobbyA1Label" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,970 @@
+@charset "utf-8";
+
+@import url("normalize.css");
+@import url("font-awesome.css");
+
+
+/*	D2l 'Main.css' merged CSS
+----------------------------------- */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/* CSS Template - Centennial College - Center for Academic Quality, Academic Excellence Unit 2017
+* Last Modified: Feb 2020 - Caroline Nichol
+*
+* Default Theme
+*
+* Description: 
+* The template was created for development purposes in eCentennial D2L LMS - Online/Hybrid Course Development Initiative 
+----------------------------------------------------------------- */
+
+
+/* Responsive Grid System
+---------------------------*/
+
+/* This removes the box-model properties (margins and paddings) of objects so that it does not interfer with width properties */
+* {
+    box-sizing: border-box;
+}
+
+/* using this row class with a DIV will help with positioning of these columns and does not interfer with object below the column */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* class starting with col- will float left and have a padding of 15px */
+.row [class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.row [class*="col-"]:first-child {padding-left: 0;}
+.row [class*="col-"]:last-child {padding-right: 0;}
+
+/* Fix columns */
+/* fix margin of columns */
+
+/* col-6 is a 6 column grid */
+.col-6 {width: 16.66%;}
+.col-6x2 {width: 33.32%;}
+.col-6x3 {width: 49.98%;}
+.col-6x4 {width: 66.64%;}
+.col-6x5 {width: 83.33%;}
+
+/* col-5 is a 5 column grid */
+.col-5 {width: 20%;}
+.col-5x2 {width: 40%;}
+.col-5x3 {width: 60%;}
+.col-5x4 {width: 80%;}
+
+/* col-4 is a 4 column grid */
+.col-4 {width: 25%;}
+.col-4x2 {width: 50%;}
+.col-4x3 {width: 75%;}
+
+/* col-3 is a 3 column grid */
+.col-3 {width: 33.33%;}
+.col-3x2 {width: 66.66%;}
+
+/* col-2 is a two column grid */
+.col-2 {width: 50%;}
+
+.col-narrow {width: 33.33%;}
+.col-wide {width: 66.66%;}
+
+/* col-1 half */
+.col-1-center {width: 75%; margin: 0 auto;}
+
+
+/* Highlight Boxes
+---------------------------*/
+.hb-icon {
+			text-align: center;	
+			padding: 15px;
+}
+
+.hb-content {		
+			background-color: #ffffff;
+			min-height: 164px;
+}
+
+.hb-doc-links {
+			border: 2px solid #4698cb; 
+			background-color: #4698cb;
+}
+
+.hb-activities {
+			border: 2px solid #f2a900; 
+			background-color: #f2a900;
+}
+
+.hb-checklist {
+			border: 2px solid #00b2a9; 
+			background-color: #00b2a9;
+}
+
+.hb-items-due {
+			border: 2px solid #d14124; 
+			background-color: #d14124;
+}
+
+.hb-important-tips {
+			border: 2px solid #503d6b; 
+			background-color: #503d6b;
+}
+
+
+/* HTML Global Styles
+----------------------*/
+
+body {
+    background: #fff;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #191919;
+    padding: 30px;
+    text-align: left;
+    line-height: 1.35;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    border-bottom: 10px solid #D4DF38;
+    /*border-top: 5px solid #D4DF38;*/
+
+    position: relative;
+}
+
+body:before {
+    content: "";
+
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    /*border-top: 25px solid #454546;*/
+}
+
+/* Readspeaker adjustments */
+.rsbtn {
+    /*right: 0;
+    top: 0;
+    position: absolute;*/
+    margin: -30px 0px 25px -30px;
+}
+
+
+hr {opacity: .1; margin: 50px 0; clear: both;}
+
+
+/* Modified Bootstrap code and pre styles */
+code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+code, kbd, pre, samp {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: .9em;
+    line-height: 1.42857143;
+    color: #191919;
+    white-space: pre-wrap;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+/* Typography
+----------------*/
+
+p {font-size:1em; text-align: left; line-height: 1.35;}
+
+h1 {background: #454546; color: #FFFFFF; border-top: 5px solid #D4DF38; font-size: 1.5em; font-weight: bold; margin: 20px -30px; padding: 10px 30px;line-height: 1.375em;}
+/* removes margin top to blend with the body's bored top */
+h1:first-child { margin-top:-25px;}
+h1 + h2 {margin-top: 1em;}
+h2 {color: #007181; border-bottom: 1px solid #CBCACC; padding-bottom: 5px;margin-top: 2em;}
+h3 {color: #414042; font-size:1.25em; margin-bottom: 15px;}
+h4 {color: #414042; font-size:1.025em; margin-bottom: 10px;}
+
+a:link {color: #003796;}
+a:visit {color: #503D6B;}
+a:hover {background-color: rgba(0,76,151, .1); transition: all .5s ease;}
+a:focus {background-color: rgba(0,76,151, .1); outline: dotted 2px #004C97;}
+
+
+/* ------ Links with external icon with accessible (hidden) text
+--------------------------------------------------------------- */
+
+a[href^="https"]:after, a[href^="http"]:after, a[href^="www."]:after, table a[href^="https"]:after, table a[href^="www."]:after, table a[href^="http"]:after  {
+    content: "\f08e (external link)";
+    font-family: FontAwesome;
+    margin-left: 5px;
+    font-weight: normal;
+    text-decoration: none;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    width: 1em;
+    height: 1.15em;
+    font-size: .9em;
+}
+
+
+ul li, ol li{margin: 10px 0;}
+ul, ol{margin-bottom:25px;}
+ul li ul, ol li ol, ul li ol, ol li ul {margin-bottom: 0px;}
+
+.list-unstyled {
+    list-style-type: none;
+}
+
+blockquote {border-left: 5px solid #CBCACC; margin-left: 50px; padding-left: 20px;}
+blockquote:before {font-family: FontAwesome;content: '\f10d';color: #CBCACC;font-size: 1.3em;margin-right: 40px;margin-left: -60px;}
+
+.large-text {font-size: 1.5em;line-height: 1.2em; font-weight: normal; margin-top: 20px;}
+.small-text {font-size: .8em;line-height: 1.25em;}
+
+
+.footer {
+    background-image: url('banner.png'); 
+    background-color: #454546;
+    margin: 50px -30px -45px -30px; 
+    color: #ffffff; 
+    font-size: .8em; 
+    text-align: center; 
+    padding: 20px;
+    clear: both;
+}
+/*
+.next-page{
+    background-color: #CBCACC; 
+    margin: 30px -30px -30px -30px; 
+    color: #ffffff; 
+    font-size: .8em; 
+    text-align: center; 
+    padding: 20px;
+
+}*/
+
+
+/* Alignments
+-----------------------------------*/
+/* Any variation of image alignment attributes with specific margins */
+img[align="left"], img[style*="float: left"], img[style*="float:left"] {margin: 0 20px 10px 0;}
+img[align="right"], img[style*="float: right"], img[style*="float:right"] {margin:0 0 10px 20px;}
+
+p[align="left"], p[style*="float: left"], p[style*="float:left"] {margin: 0 20px 10px 0;}
+p[align="right"], p[style*="float: right"], p[style*="float:right"] {margin:0 0 10px 20px;}
+
+.right {
+    float: right;
+    margin: 0px 0 10px 15px;
+}
+
+.left {
+    float: left;
+    margin: 0px 15px 10px 0;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+/* Image Caption layout 
+-------------------------------*/
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+div.image-caption {
+    text-align: center;
+    padding: 10px;
+    background: #eee;
+}
+
+div.image-caption ul, div.image-caption ol {
+    text-align: left;
+}
+
+div.image-caption h3{ 
+    /*text-align: center;*/
+}
+
+
+div.image-caption img {
+    /*min-height: 200px;*/
+}
+
+div.image-caption p {
+    border-left: 5px solid #F2A900;
+    padding: 15px 10px;
+    margin: 0;
+    font-size: .8em;
+    line-height: 1.25em;
+}
+
+
+
+/** Caption - using accordion functionality **/
+[id^='caption'] .ui-state-default {
+    
+}
+
+[id^='caption'] .ui-state-active {
+    border: 1px solid #007181;
+    background: #008598;
+}
+
+div.image-caption [id^='caption'] {
+    margin: 15px 0 5px 0;
+}
+
+div.image-caption [id^='caption'] p {
+    border-left: none;
+    font-size: 1em;
+}
+
+div.image-caption [id^='caption'] > div {
+    font-size: .8em;
+    text-align: left;
+}
+
+
+
+/* H5P layout */
+[class*="highlight"] iframe {
+    border: none;
+}
+
+
+
+/* Video layout */
+
+iframe {
+    border: 1px solid #ccc;
+}
+
+.responsive-video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.responsive-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Font Colour - based on eCentennials branded colours
+---------------------------------------------------------*/
+.text{color: #191919;}
+
+.green{color: #D4DF38;}
+.grey{color: #454546;}
+.white{color: #FFFFFF;}
+.lightgrey{color: #f5f5f5;}
+
+.red{color: #A6192E;}
+.orange{color: #D14124;}
+.lightorange{color: #F2A900;}
+.yellow{color: #EADB1B;}
+.lightblue{color: #4698CB;}
+.blue{color: #004C97;}
+.purple{color: #503D6B;}
+
+/* NEW COLOURS */
+.wine{color: #910048;}
+.turquoise{color: #008598;}
+.marine{color: #00B2A9;}
+
+
+
+/*  Highlights
+------------------------ */
+/* Base structure */
+[class*="highlight"] {
+    min-height: 95px;
+    margin:15px 0;
+    padding: 5px 20px;
+    clear: both;
+    box-shadow: 2px 3px 0px 0 #ffffff inset, 6px 6px 8px -7px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+} 
+
+/* Background and Border colour */
+.green-highlight {background-color: rgba(0,178,169, .15);border: 2px solid #00B2A9;}
+.grey-highlight {background-color: rgba(125,125,125, .15); border: 2px solid #CCCCCC;}
+.white-highlight {background-color: #fff;border: 2px solid #CBCACC;}
+
+.red-highlight {background-color: rgba(166, 25, 46, .15);border: 2px solid #A6192E;}
+.orange-highlight {background-color: rgba(242,169,0, .15);border: 2px solid #F2A900;}
+.yellow-highlight {background-color: rgba(234, 219, 27, .15);border: 2px solid #EADB1B;}
+.blue-highlight {background-color: rgba(70,152,203, .15);border: 2px solid #4698CB;}
+.purple-highlight {background-color: rgba(80, 61, 107, .15);border: 2px solid #503D6B;}
+
+/*New Highlight Color*/
+.turquoise-highlight {background-color: rgba(0,133,152, .15);border: 2px solid #008598;}
+
+p[class*="highlight"] {
+    padding: 1em;
+}
+
+[class$="highlight"] h2,[class$="highlight"] h3{
+    border-bottom: none;
+    margin: -5px -20px;
+    padding: 15px 1em;
+    background-color: inherit;
+}
+
+/* inline highlights */
+
+.inline {
+    clear: none;
+    display: inline-block;
+    width: 48%;
+}
+
+
+[class*="icon-box"] {
+    margin-left: 85px;
+}
+
+[class*="icon-box"]:before {
+    font-family: FontAwesome;
+    font-size: 4em;
+    color: #fff;
+    background: #4698CB;
+    padding: 5px 20px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.wlo-icon-box:before {content: "\f0eb";background: #4698CB;}
+.info-icon-box:before {content: "\f05a";background: #503D6B;}
+.read-icon-box:before {content: "\f02d";background: #00B2A9;font-size: 3em;}
+.audio-icon-box:before {content: "\f001";background: #00B2A9;font-size: 3em;}
+
+/*  Tables
+------------------------ */
+/* Base structure */
+table {
+    min-width:50%;
+    max-width:100%;
+    width: 100% !important;
+    vertical-align: middle;
+    padding: 10px;
+    margin:30px 0px;
+    border-spacing: 3px;
+    table-layout : fixed;
+    border-collapse: collapse;
+}
+
+caption, th, td {
+    padding: 5px 10px;
+    border:1px solid #cccccc;
+}
+
+/* Table with highlight COL and ROW Scope */
+table[class$="highlight"] caption {border:none;font-weight: bold;background: inherit;text-align: left;}
+table[class$="highlight"] th, table[class$="highlight"] td{border:none; text-align: left;vertical-align: top;}
+/* If a table has two column make them equal in size */
+/*table[class$="highlight"] th + th {width: 50%;}*/
+/*table[class$="highlight"] th + th + th {width: 33%;}*/
+
+table.grey-highlight th[scope="col"], table.grey-highlight th[scope="row"]  {background-color: rgba(125,125,125, .15);}
+table.green-highlight th[scope="col"], table.green-highlight th[scope="row"] {background-color: rgba(0,178,169, .15);}
+table.blue-highlight th[scope="col"], table.blue-highlight th[scope="row"] {background-color: rgba(70,152,203, .15);}
+table.purple-highlight th[scope="col"], table.purple-highlight th[scope="row"] {background-color: rgba(80, 61, 107, .15);}
+
+table.red-highlight th[scope="col"], table.red-highlight th[scope="row"] {background-color: rgba(166, 25, 46, .15);}
+table.orange-highlight th[scope="col"], table.orange-highlight th[scope="row"] {background-color: rgba(242,169,0, .15);}
+table.yellow-highlight th[scope="col"], table.yellow-highlight th[scope="row"] {background-color: rgba(234, 219, 27, .15);}
+
+/* New Table Color */
+table.turquoise-highlight th[scope="col"], table.turquoise-highlight th[scope="row"] {background-color: rgba(0,133,152, .15);}
+
+
+
+
+/*  Custom Tables 
+------------------------ */
+
+/* Base Structure */
+table[class$="table"] {color: #252327; border-collapse: collapse; background-color:#ffffff;}
+table[class$="table"] td, 
+table[class$="table"] th {vertical-align: middle;padding: 5px 15px;}
+table[class$="table"] caption {text-align:left; font-size:1.2em; padding:10px 15px;}
+
+/* Data Cells - Column and Row Headers - Caption - Odd Row Shade*/
+
+/* WHITE  */
+table.white-table caption,
+table.white-table td, 
+table.white-table th {border:1px solid #fff;}
+table.white-table caption {background-color: #fff;}
+table.white-table th, table.white-table th[scope="row"], table.white-table th[scope="col"] {background-color: #fff;}
+table.white-table tr:nth-child(odd) {background-color: #fff;}
+
+/* LIGHT GREY */
+table.lightgrey-table caption,
+table.lightgrey-table td, 
+table.lightgrey-table th {border:1px solid #7d7d7d;}
+
+table.lightgrey-table caption {background-color: #f5f5f5;}
+table.lightgrey-table th, table.lightgrey-table th[scope="row"], table.lightgrey-table th[scope="col"] {background-color: rgba(125,125,125, .3);}
+
+/*table.lightgrey-table tr:nth-child(odd) {background-color: rgba(125,125,125, .15);}*/
+
+/* GREY */
+table.grey-table caption,
+table.grey-table td, 
+table.grey-table th {border:1px solid #454546;}
+
+table.grey-table caption {color: #ffffff; background-color: #454546;}
+table.grey-table th, table.grey-table th[scope="row"], table.grey-table th[scope="col"] {color:#FFF;background-color:rgba(69, 69, 70, .9);}
+
+table.grey-table tr:nth-child(odd) {background-color: rgba(69, 69, 70, .1);}
+
+/* GREEN  */
+table.green-table caption,
+table.green-table td, 
+table.green-table th {border: 1px solid #00B2A9;}
+
+table.green-table caption {color: #ffffff; background-color: #00B2A9;}
+table.green-table th, table.green-table th[scope="row"], table.green-table th[scope="col"] {background-color: rgba(0,178,169, .5);}
+
+table.green-table tr:nth-child(odd) {background-color: rgba(0,178,169, .15);}
+
+
+/* BLUE  */
+table.blue-table caption,
+table.blue-table td, 
+table.blue-table th { border: 1px solid #4698CB;}
+
+table.blue-table caption {color: #ffffff; background-color: #4698CB;}
+table.blue-table th, table.blue-table th[scope="row"], table.blue-table th[scope="col"] {background-color: rgba(70,152,203,.4);}
+
+table.blue-table tr:nth-child(odd) {background-color: rgba(70,152,203, .15);}
+
+
+/* Purple  */
+table.purple-table caption,
+table.purple-table td, 
+table.purple-table th { border: 1px solid #503D6B;}
+
+table.purple-table caption {color: #ffffff; background-color: #503D6B;}
+table.purple-table th, table.purple-table th[scope="row"], table.purple-table th[scope="col"] {background-color: rgba(80, 61, 107, .3);}
+
+table.purple-table tr:nth-child(odd) {background-color: rgba(80, 61, 107, .15);}
+
+/* Red  */
+table.red-table caption,
+table.red-table td, 
+table.red-table th { border: 1px solid #A6192E;}
+
+table.red-table caption {color: #ffffff; background-color: #A6192E;}
+table.red-table th, table.red-table th[scope="row"], table.red-table th[scope="col"] {background-color: rgba(166, 25, 46, .3);}
+
+table.red-table tr:nth-child(odd) {background-color: rgba(166, 25, 46, .15);}
+
+/* orange  */
+table.orange-table caption,
+table.orange-table td, 
+table.orange-table th { border: 1px solid #F2A900;}
+
+table.orange-table caption {background-color: rgba(242,169,0,1);}
+table.orange-table th, table.orange-table th[scope="row"], table.orange-table th[scope="col"] {background-color: rgba(242,169,0, .4);}
+
+table.orange-table tr:nth-child(odd) {background-color: rgba(242,169,0, .15);}
+
+
+/* yellow  */
+table.yellow-table caption,
+table.yellow-table td, 
+table.yellow-table th { border: 1px solid #EADB1B;}
+
+table.yellow-table caption {background-color: #EADB1B;}
+table.yellow-table th, table.yellow-table th[scope="row"], table.yellow-table th[scope="col"] {background-color: rgba(234, 219, 27, .5);}
+
+table.yellow-table tr:nth-child(odd) {background-color: rgba(234, 219, 27, .15);}
+
+
+
+/*---------------------------------*/
+/* CUSTOMIZED ICONS
+-----------------------------------*/
+
+
+/* Font Awesome Header Icons
+--------------------------------*/
+
+/* ---------- ICONS Without Text (BEFORE) ---------- */
+
+[class$="icon"]:before {
+    font-family: FontAwesome;
+    margin-right: 10px;
+    font-weight: normal;
+}
+
+.learningoutcome-icon:before {content: "\f0eb";}/* Icon:	Light Buld */
+.checklist-icon:before {content: "\f046";}		/* Icon:	Checkbox */
+.readings-icon:before {content: "\f02d";}		/* Icon:	Book */
+.content-icon:before {content: "\f002";}        /* Icon:    Magnifying Glass */
+.activity-icon:before {content: "\f245";}       /* Icon:    Mouse  */
+.discussion-icon:before {content: "\f086";}     /* Icon:    Speech Bubbles */
+.connect-icon:before {content: "\f1e6";}        /* Icon:    plug */
+.video-icon:before {content: "\f16a"; }         /* Icon:    Play Button */
+
+.percentage-icon:before {content: "\f295";}     /* Icon:    percentage  */
+.pencil-icon:before {content: "\f040";}         /* Icon:    Pencil  */
+.due-icon:before {content: "\f073";}            /* Icon:    calendar  */
+
+.info-icon:before {content: "\f05a";}			/* Icon:	information Sign */
+.question-icon:before {content: "\f059";}		/* Icon:	Question Sign */
+
+.sync-icon:before {content: "\f021";}			/* Icon:	Sync  */
+.summary-icon:before {content: "\f03a";}        /* Icon:    Summary  */
+.reference-icon:before {content: "\f02e";}      /* Icon:    Bookmark  */
+.links-icon:before {content: "\f0c1";}          /* Icon:    Links  */
+
+.prev-icon:before {content: "\f0a8";}           /* Icon:    right arrow  */
+.next-icon:before {content: "\f18e";}           /* Icon:    right arrow  */
+
+.file-icon:before {content: "\f15c";}           /* Icon:    file  */
+.powerpoint-icon:before {content: "\f1c4";}     /* Icon:    PPT */
+
+.wrench-icon:before {content: "\f0ad"; }        /* Icon:    wrench */
+.puzzle-icon:before {content: "\f12e";}         /* Icon:    puzzle */
+
+.online-icon:before {content: "\f109";}         /* Icon:    Laptop  */
+
+.volumn-icon:before {content: "\f028";}         /* Icon:    volume-up  */
+
+.music-icon:before {content: "\f001";}         /* Icon:    music  */
+
+.bubble-icon:before {content: url('../images/bubble.png');}              /* Icon:   thought bubble */
+.puzzles-icon:before {content: url('../images/puzzle.png');}             /* Icon:   puzzle piece */
+
+.inclass-icon:before {content: url('../images/inclass.png');}            /* Icon:   inclass prof */
+
+
+
+/* ---------- ICONS With Text (AFTER) ---------- */
+[class*="icon-text"]:after {
+    font-family: FontAwesome;
+    float: right;
+    font-weight: normal;
+    font-size: .8em;
+    color: #CBCACC;
+}
+
+h1[class*="icon-text"] {
+    padding: 10px 205px 10px 30px;
+}
+
+h1[class*="icon-text"]:after {
+    margin-right: -175px;
+}
+
+.practice-icon-text:after {content: "\f245  Practice";} 			/* Icon:	Mouse pointer */
+.graded-icon-text:after {content: "\f295  Graded";} 				/* Icon:	Percent Sign */
+.individual-icon-text:after {content: "\f007  Individual Work";}    /* Icon:	Single Student */
+.support-icon-text:after {content: "\f05a  Support";}               /* Icon:	Information i circle */
+.groups-icon-text:after {content: "\f0c0  Groups";} 				/* Icon:	Group multiple students */
+.help-icon-text:after {content: "\f059  Help";}					    /* Icon:	Question Sign */
+.calendar-icon-text:after {content: "\f274  Calendar";} 			/* Icon:	Calendar */
+.tools-icon-text:after {content: "\f0ad  Tools";}					/* Icon:	Wrench */
+.video-icon-text:after {content: "\f16a  Watch & Listen";}		    /* Icon:	Play Button */
+.discussion-icon-text:after {content: "\f086  Discussion Post";}	/* Icon:	Speech Bubbles */
+.content-icon-text:after {content: "\f002  Discover & Learn";}      /* Icon:	Magnifying Glass */
+.dropbox-icon-text:after {content: "\f01c  Dropbox";}               /* Icon:    Dropbox inbox */
+.assignment-icon-text:after {content: "\f01c  Assignment Folder";}  /* Icon:    Dropbox inbox */
+.powerpoint-icon-text:after {content: "\f1c4  Download";}           /* Icon:    PPT inbox */
+
+.feedback-icon-text:after {content: "\f0a1  Feedback";}             /* Icon:    megaphone */
+
+.gettingstarted-icon-text:after {content: "\f14e  Getting Started";}                    /* Icon:    Flag */
+.readwatch-icon-text:after {content: "\f06e  Read and Watch";}                          /* Icon:    Eye */
+.participate-icon-text:after {content: "\f040  Participate";}                           /* Icon:    Pencil */
+.readwatchparticipate-icon-text:after {content: "\f040  Read, Watch and Participate";}  /* Icon:    Pencil */
+.readparticipate-icon-text:after {content: "\f040  Read and Participate";}              /* Icon:    Pencil */
+.wrapup-icon-text:after {content: "\f024  Wrap up";}                                    /* Icon:    Flag */
+
+
+
+/*  Next page indicator
+---------------------------*/
+.next {font-size: .8em;	float: right; margin: 5px -20px 0px 0px;color: #D14124;}
+.next:before {font-family: FontAwesome;content: "\f078";float: right;margin-left: 10px;}
+
+
+
+/* CSS Quiz */
+
+.quiz a:focus {border: dotted 1px #000;display: block;margin: -3px;outline:none;padding:2px;}
+
+/** ACCORDION activity QUIZ - CSS CHECK ANSWER **/
+.quiz li{font-weight:bold;}
+.quiz input[type="radio"] {display:none;}
+.answer{cursor:pointer;}
+
+/** Incorrect/false answer displays x icon and red box **/
+.quiz .false:checked + .answer {color: #d41;}
+.quiz .false:checked + .answer:after {font-family:FontAwesome;content:'\f00d  Incorrect';margin-left:10px;border: 1px solid #333;padding: 5px;}
+/** Correct/true answer displays check mark icon and green box **/
+.quiz .true:checked + .answer {color: green;}
+.quiz .true:checked + .answer:after {font-family:FontAwesome;content:'\f00c  Correct';margin-left:10px;border: 1px solid #333;padding: 5px;}
+
+
+/* MathML fixes */
+/* overrides position of MathJax elements */
+#MathJax_Message + h1 {margin-top: -25px;}
+
+/* Add a little bit of margin, left and right */
+.MathJax {margin: 0 1em !important;}
+
+/* Adjusts font size */
+.mstyle {font-size: 18px;}
+
+
+
+/* jQuery changes 
+____________________ */
+
+/* Buttons Customization 
+--------------------------- */
+.ui-button{
+    border: 1px solid #cbcacc;
+    background: #ededed;
+    padding: 1em 1em
+}
+
+/* widget Customization 
+--------------------------- */
+.ui-widget {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    box-shadow: 2px 2px 4px rgba(69, 69, 70, 0.1);
+    clear: both;
+}
+
+/*.ui-widget-content a:link {color: #003796;}*/
+.ui-widget-content a {color: #007181;}
+.ui-widget-content a:visit {color: #503D6B;}
+.ui-widget-content a:hover {background-color: rgba(0,76,151, .1); transition: all .5s ease;}
+.ui-widget-content a:focus {background-color: rgba(0,76,151, .1); outline: dotted 2px #004C97;}
+
+
+/* Accordion open and close button */
+.open, .close {
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: .8em;
+    float: right;
+    margin: 0px 0px 10px 10px;
+}
+
+.open:after {
+    font-family: FontAwesome;
+    content: "\f067";
+    margin-left: 10px;font-weight: normal;
+}
+
+.close:after {
+    font-family: FontAwesome;
+    content: "\f068";
+    margin-left: 10px;font-weight: normal;
+}
+
+.ui-icon {float: right;margin: 5px;}
+
+
+.ui-state-active {
+    border: 1px solid #008598;
+    background: #008598;
+	
+}
+
+.ui-widget-header {
+    border: 1px solid #cbcacc;;
+    background: #f5f5f5;
+}
+
+/* visually adds borders to the accordion and tabs sections for editing purposes (so faculty can see when a tab/accordion starts and ends) */
+#tinymce #accordion > div, 
+#tinymce #tabs > div {
+    border:1px solid #008598; 
+    padding: 10px; 
+    margin: 10px 0px;
+    clear: both;
+}
+
+#tabs h2, #tabs h3, #tabs h4 {
+    margin: .1em 0;
+}
+
+.ui-tabs .ui-tabs-panel { 
+    min-height: 100px;
+    padding: 1em 1.4em 2em 1.4em;
+}
+
+.ui-tabs .ui-tabs-hide { display: none !important; }
+
+/* Style of the auto-generated next and previous buttons in tabs */
+button.tabbtn, button.tabbtn:hover { 
+    background: #007181;
+    color: #FFFFFF;
+    padding: 10px 15px 10px 15px;
+    margin: -2px -25px;
+    text-decoration: none;
+    border: none;
+}
+
+.next-tab { float: right; -moz-border-radius-topleft: 10px; -webkit-border-top-left-radius: 10px;}
+.prev-tab { float: left; -moz-border-radius-topright: 10px; -webkit-border-top-right-radius: 10px; }
+
+
+/* Tooltip style for strong elements */
+strong[title] {
+    text-decoration: underline dotted;
+}
+#tooltip button {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    min-height: 60px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 2px solid #555;
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
+    color: #555;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+
+
+#tooltip p {
+    text-align: center;
+    margin: 10px 0 5px 0;
+    font-size: .6em;
+}   
+
+
+/** For print accessibility
+- Shows all hidden content in tabs and accordions 
+- Eco-friendly printing (min spacing between objects)
+**/
+@media print {
+
+    /** opens/displays all the accordion panels on a page **/
+    .ui-accordion .ui-accordion-content {
+        display: block !important;
+        height: auto !important;
+    }
+    /** opens/displays all the tab panels/pane on a page **/	
+    .ui-tabs .ui-tabs-panel {
+        display: block !important; 
+        opacity: 1 !important; 
+        visibility: visible !important;
+    }
+
+    /** hides the nav-tabs **/
+    .ui-tabs-nav { display: none !important;}
+
+    .next-tab, .prev-tab {display: none;}
+    .open, .close {display: none;}
+
+    body {
+        font-size: 10pt;
+    }
+
+    /** Minimize spacing **/	
+    hr {margin:0;}
+
+
+    a:after{content:" ("attr(href)")" !important;display: inline !important;word-wrap: break-word;overflow: visible !important;}
+
+    [class$="icon"]:before {
+        content: "";font-family: FontAwesome;margin-right: 0;font-weight: normal;
+    }
+
+}
+
+
+
+/** For Responsive Mobile/Small Tablet view **/
+@media only screen and (max-width: 768px) {
+
+    /** Smaller Margins **/	
+    body { padding:20px 10px 5px 10px;font-size:14px;border-bottom: 15px solid #D4DF38;/*border-top: 5px solid #D4DF38;*/}
+    body:before { /*border-top: 10px solid #454546;*/}
+    h1 { margin: 0px 0px;text-align: center;padding: 10px 10px;}
+
+    .footer {margin: 10px -10px -10px -10px;padding: 10px;}
+
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+
+    /** Minimize spacing **/		
+    hr {margin:20px 0;}
+
+.row [class*="col-"] {
+    padding: 0;
+}
+
+/* Readspeaker adjustments */
+    .rsbtn {
+        margin: -20px 0px 25px 0px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
